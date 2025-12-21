@@ -5,12 +5,10 @@
 The goal of this assignment is to **understand and apply the complete Machine Learning (ML) pipeline** using **Logistic Regression** for a **binary classification problem**.
 
 By the end of this assignment, you should be able to:
-
 - Apply the ML pipeline to a classification task
 - Train and evaluate a logistic regression model
 - Interpret coefficients and intercepts in a classification setting
 - Compare single-feature vs multi-feature logistic regression models
-
 ---
 
 ## 🧠 The Machine Learning Pipeline
@@ -53,6 +51,9 @@ Build a **logistic regression model** using **only one input feature** to predic
 ---
 
 ### 🔍 Step-by-Step Requirements
+
+#### 0️⃣ Background
+- AI, ML, DL, Data Science
 
 #### 1️⃣ Data Retrieval and Collection
 - Load the Heart Disease dataset

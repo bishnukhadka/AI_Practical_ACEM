@@ -2,7 +2,7 @@
 
 ## 📌 Objective
 
-The goal of this assignment is to **understand and apply the complete Machine Learning (ML) pipeline** using **Logistic Regression** for a **binary classification problem**.
+The goal of this assignment is to **understand and apply the Machine Learning (ML) pipeline** using **Logistic Regression** for a **binary classification problem**.
 
 By the end of this assignment, you should be able to:
 - Apply the ML pipeline to a classification task
@@ -91,10 +91,8 @@ Evaluate the model using appropriate **classification metrics**, such as:
 - Precision
 - Recall
 - F1-score
-- Confusion Matrix
 
-Provide a short interpretation of the results.
-- Plot the **sigmoid curve** for Task 1
+Also, print the `confusion matrix`. 
 
 ---
 
@@ -102,7 +100,7 @@ Provide a short interpretation of the results.
 
 ### 🎯 Problem Statement
 
-Build a **logistic regression model** using **all available input features** to predict heart disease.
+Build a **classification model** using **all available input features** to predict heart disease.
 
 - **Input Features:** All variables except `HeartDisease`
 - **Target Variable:** `HeartDisease`
@@ -119,7 +117,6 @@ Repeat **all seven ML pipeline steps** from Task 1 with the following changes:
 - Apply feature scaling where appropriate
 - Explain why using multiple features may improve prediction performance
 
-
 ---
 
 ## 📊 Model Comparison
@@ -130,16 +127,22 @@ Compare **Task 1 and Task 2** models:
 - How does adding more features affect accuracy and recall?
 - Trade-offs between interpretability and performance
 
+## Discussion 
+(Model Comparision can be written in Discussions if you wish)
+
+## Conclusion
+
 ---
 
 ## 📦 Deliverables
 
-Submit:
+Submit (in Google Classroom):
 
-- A **Jupyter Notebook (.ipynb)**:
-  - Code
-  - Clear markdown explanations for each ML pipeline step
-- Well-labeled outputs and visualizations (if used)
+- Link to the .ipynb file in your personal GitHub repository. 
+
+OR
+
+- PDF file converted from your .ipynb file.  
 
 ---
 

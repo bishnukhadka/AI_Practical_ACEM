@@ -4,13 +4,6 @@
 
 The goal of this assignment is to help you **understand and remember the complete Machine Learning (ML) pipeline** by applying it step-by-step to a **Linear Regression** problem.
 
-By the end of this assignment, you should be able to:
-
-- Clearly explain each stage of the ML pipeline
-- Train and evaluate linear regression models
-- Interpret model coefficients and intercepts
-- Compare single-feature vs multi-feature regression models
-
 ---
 
 ## 🧠 The Machine Learning Pipeline
@@ -31,19 +24,7 @@ For **both tasks**, you must explicitly follow and document **all** of the follo
 
 ## 📊 Dataset
 
-You will use the **California Housing Dataset**, which contains information about housing districts in California.
-
-### Target Variable (Label)
-- `median_house_value`
-
-### Input Features (Examples)
-- `housing_median_age`
-- `total_rooms`
-- `total_bedrooms`
-- `population`
-- `households`
-- `median_income`
-- etc.
+You will use the **Salary Dataset**
 
 ---
 
@@ -53,25 +34,23 @@ You will use the **California Housing Dataset**, which contains information abou
 
 Build a **simple linear regression model** using **only one input feature** to predict housing prices.
 
-- **Input Feature:** `housing_median_age`
-- **Label:** `median_house_value`
+- **Input Feature:** `YearsExperience`
+- **Label:** `Salary`
 
 ---
 
 ### 🔍 Step-by-Step Requirements
 
 #### 1️⃣ Data Retrieval and Collection
-- Load the California Housing dataset
+- Load the dataset
 - Display basic information (shape, column names)
 
 #### 2️⃣ Data Cleaning
 - Handle missing values (if any)
-- Explain how missing values were treated
+- Explain how missing values were treated (if any)
 - Verify data types
 
 #### 3️⃣ Feature Design
-- Select `housing_median_age` as the only input feature
-- Explain why this feature was chosen
 - Separate features (`X`) and label (`y`)
 
 #### 4️⃣ Algorithm Selection
@@ -83,16 +62,18 @@ Build a **simple linear regression model** using **only one input feature** to p
 - Briefly explain what MSE measures
 
 #### 6️⃣ Model Learning (Training)
-- Split the data into training and testing sets
 - Train the linear regression model
 - Clearly state the learning process
 
 #### 7️⃣ Model Evaluation
-- Evaluate the model on test data
 - Report:
   - Mean Squared Error (MSE)
   - (Optional) R² Score
 - Provide a short interpretation of the results
+
+### Discussion
+
+### Conclusion
 
 ### Extra
 - Visualize the regression line for Task 1
@@ -113,59 +94,16 @@ Explain:
 
 ---
 
-## 🧪 Task 2: Multiple Linear Regression (All Features)
-
-### 🎯 Problem Statement
-
-Build a **multiple linear regression model** using **all available input features** (except the label) to predict housing prices.
-
-- **Input Features:** All remaining features
-- **Label:** `median_house_value`
-
----
-
-### 🔍 Step-by-Step Requirements
-
-Repeat **all seven ML pipeline steps** as in Task 1, but with the following differences:
-
-#### 3️⃣ Feature Design
-- Use **all features except** `median_house_value`
-- Apply feature scaling if necessary
-- Explain why multiple features may improve prediction performance
-
----
-
-### 📈 Model Interpretation (Mandatory)
-
-After training the model, report:
-
-- **Intercept**
-- **All coefficients**
-
-Explain:
-- What does each coefficient represent?
-- How does this model differ from the single-feature model?
-
----
-
-## 📊 Model Comparison
-
-Provide a short comparison between **Task 1 and Task 2**:
-
-- Which model performs better?
-- Why does using multiple features help or hurt performance?
-- Which model is easier to interpret?
-
----
 
 ## 📦 Deliverables
 
-Submit:
+Submit (in Google Classroom):
 
-- A **Jupyter Notebook (.ipynb)** or **Python script (.py)** containing:
-  - Code
-  - Clear markdown explanations for each ML pipeline step
-- This completed assignment document (optional, if instructed)
+- Link to the .ipynb file in your personal GitHub repository. 
+
+OR
+
+- PDF file converted from your .ipynb file.  
 
 ---
 

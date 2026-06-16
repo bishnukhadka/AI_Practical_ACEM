@@ -1,11 +1,8 @@
 # Lab 5: Neural Networks
 
-Please refer to the [Old Syllabus Lab 3](../../Old_Syllabus/Lab3-NN) directory.
-
-
 On a high level, the inspiration for neural networks comes from the biological neurons in the human brain, which communicate through electrical signals.
 
-![NN with activation](https://lamarr-institute.org/wp-content/uploads/deepLearn_2_EN.png)
+<!-- ![NN with activation](https://lamarr-institute.org/wp-content/uploads/deepLearn_2_EN.png) -->
 
 A neural network is comprised of:
 
@@ -20,32 +17,32 @@ Like other machine learning algorithms, neural networks must be trained on data 
 
 For a single neuron, the computation is:
 
-\[
+$$
 z = \sum_{i=1}^{n} w_i x_i + b
-\]
+$$
 
-\[
+$$
 a = \sigma(z)
-\]
+$$
 
 Where:
 
-- \(x_i\) = input feature
-- \(w_i\) = weight
-- \(b\) = bias
-- \(z\) = weighted sum (linear transformation)
-- \(\sigma\) = activation function (nonlinear transformation)
-- \(a\) = output
+- $x_i$ = input feature
+- $w_i$ = weight
+- $b$ = bias
+- $z$ = weighted sum (linear transformation)
+- $\sigma$ = activation function (nonlinear transformation)
+- $a$ = output
 
 The neuron first calculates a weighted sum of the inputs and bias. This value is then passed through an activation function, which introduces nonlinearity and helps the network learn complex patterns.
 
-By combining many neurons across multiple layers, the network transforms input features \(X\) into an output \(Y\), allowing it to perform tasks such as classification or prediction.
+By combining many neurons across multiple layers, the network transforms input features $X$ into an output $Y$, allowing it to perform tasks such as classification or prediction.
 
 ## How Neural Networks Learn
 
 The strength of a neural network comes from its ability to learn the correct weights and biases from data.
 
-During training, the network compares its prediction \(\hat{Y}\) with the true label \(Y\). The difference between them is measured using a **loss function**, which indicates how well the model is performing.
+During training, the network compares its prediction $\hat{Y}$ with the true label $Y$. The difference between them is measured using a **loss function**, which indicates how well the model is performing.
 
 To reduce this error, neural networks use **backpropagation** and an optimization algorithm such as **gradient descent**.
 

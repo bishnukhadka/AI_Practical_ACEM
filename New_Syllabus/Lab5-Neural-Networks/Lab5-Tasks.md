@@ -19,15 +19,15 @@ class LinearRegressionNN(nn.Module):
 
 * Using the model definition above, determine whether the model is capable of learning from each dataset provided in Lab 4:
 
-  * `linear-regression-data1.csv`
-  * `assignment-data.csv`
-  * `assignment-data2.csv`
+  * [linear-regression-data1.csv](../Lab4-Regression-using-PyTorch/linear-regression-data1.csv) 
+  * [assignment-data.csv](../Lab4-Regression-using-PyTorch/assignment-data.csv)
+  * [assignment-data2.csv](../Lab4-Regression-using-PyTorch/assignment-data2.csv)
 
 **Note:** Only determine whether the model can be trained on the datasets and whether its architecture is appropriate. A detailed performance evaluation is not required.
 
 ## Task 2
 
-1. Determine whether the `LinearRegressionNN` model is suitable for the dataset `binary_classification_moons.csv`.
+1. Determine whether the `LinearRegressionNN` model is suitable for the dataset [binary_classification_moons.csv](../../Old_Syllabus/Lab3-NN/binary_classification_moons.csv).
 
 2. Determine whether the following model `ModelV0` is suitable for the same dataset. Justify your answer by explaining why the model is or is not appropriate.
 
@@ -42,7 +42,7 @@ class ModelV0(nn.Module):
         return self.layer_2(self.layer_1(x))
 ```
 
-3. Modify the model by increasing the number of layers and/or hidden units. An example is provided in `Lab-5.1-NN.ipynb`. Evaluate the suitability of the resulting model architecture(s) for the `binary_classification_moons.csv` dataset and justify your conclusions.
+3. Modify the model by increasing the number of layers and/or hidden units. An example is provided in [Lab-5.1-NN.ipynb](./Lab-5.1-NN.ipynb). Evaluate the suitability of the resulting model architecture(s) for the [binary_classification_moons.csv](../../Old_Syllabus/Lab3-NN/binary_classification_moons.csv) dataset and justify your conclusions.
 
 ## Task 3
 

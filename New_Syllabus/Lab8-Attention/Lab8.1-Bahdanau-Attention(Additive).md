@@ -12,7 +12,7 @@ To better understand the motivation behind the proposed attention mechanism, we 
 
 ![abstract](./images/Abstract.png)
 
-Here, things stand out: 
+The following points are particularly significant in the Abstract:
 
 1. Recent encoder–decoder models represent the entire source sentence using a single fixed-length vector.
 2. This fixed-length vector becomes a `bottleneck`, especially for long sentences, because it cannot capture all the information in the source sentence.
@@ -181,7 +181,7 @@ class AttnDecoderRNN(nn.Module):
         super(AttnDecoderRNN, self).__init__()
         self.embedding = nn.Embedding(output_size, hidden_size)
         self.attention = BahdanauAttention(hidden_size)
-        self.gru = nn.GRU(2 * hidden_size, hidden_size, batch_first=True)
+        self.rnn = nn.RNN(2 * hidden_size, hidden_size, batch_first=True)
         self.out = nn.Linear(hidden_size, output_size)
         self.dropout = nn.Dropout(dropout_p)
 
@@ -217,11 +217,11 @@ class AttnDecoderRNN(nn.Module):
     def forward_step(self, input, hidden, encoder_outputs):
         embedded =  self.dropout(self.embedding(input))
 
-        query = hidden.permute(1, 0, 2)
+        query = hidden.permute(1, 0, 2) # seq_len, batch, hidden_size -> batch, seq_len, hidden_size
         context, attn_weights = self.attention(query, encoder_outputs)
-        input_gru = torch.cat((embedded, context), dim=2)
+        input_rnn = torch.cat((embedded, context), dim=2)
 
-        output, hidden = self.gru(input_gru, hidden)
+        output, hidden = self.rnn(input_rnn, hidden)
         output = self.out(output)
 
         return output, hidden, attn_weights
@@ -231,6 +231,14 @@ ___
 **Instruction**:
 
 Replace the decoder implementation in the Lab 7 code with the attention-based decoder described above. The encoder implementation remains unchanged.
+
+## Summary
+
+- The goal of Bahdanau attention (from the paper ["Neural Machine Translation by Jointly Learning to Align and Translate"](https://arxiv.org/pdf/1409.0473) by Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio) was to solve the main weakness of early encoder-decoder translation models: the fixed-length bottleneck. Before attention, the encoder compressed an entire source sentence into one final hidden vector, forcing the decoder to extract all information from that single representation; this became especially problematic for long sentences because important details were lost. 
+- Bahdanau attention introduced a mechanism where the decoder could dynamically look back at all encoder hidden states and learn which source words are relevant at each generation step, effectively creating a soft alignment between input and output words (e.g., when generating "house" in English, the model can attend strongly to "maison" in French). This was `Additive Attention`. 
+- The improvement was that translation quality increased significantly, especially for longer sentences, because the model no longer needed to memorize the entire sentence in one vector—it could retrieve information when needed. 
+- In the current context, the core idea of Bahdanau attention remains extremely important because it introduced the concept of selective information retrieval, which became the foundation for modern Transformer architectures: Transformers replaced recurrent attention with self-attention, allowing every token to directly interact with every other token in parallel, but the fundamental idea remains the same
+    - do not compress everything into one hidden state; instead, learn what information is important for each prediction step.
 
 ---
 ### References:

@@ -26,7 +26,7 @@ $$
 h_i = [\overrightarrow{h_i}; \overleftarrow{h_i}]
 $$
 
-where (\overrightarrow{h_i}) represents the forward hidden state and (\overleftarrow{h_i}) represents the backward hidden state.
+where $(\overrightarrow{h_i})$ represents the forward hidden state and $(\overleftarrow{h_i})$ represents the backward hidden state.
 
 ## Decoder
 

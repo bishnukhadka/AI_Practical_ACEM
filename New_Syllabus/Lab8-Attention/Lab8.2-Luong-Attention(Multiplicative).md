@@ -34,7 +34,7 @@ The decoder functions slightly differently.
 
 ### 1. Decoder RNN
 The current decoder hidden state is computed as: 
-$$ s_t = RNN_{decoder}(s_{t-1}, y_{t-1}) $$
+$$s_t = RNN_{decoder}(s_{t-1}, y_{t-1})$$
 
 Here, 
 - $s_{t-1}$ denotes the previous hidden decoder state and 

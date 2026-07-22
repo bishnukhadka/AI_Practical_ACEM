@@ -269,6 +269,18 @@ Source: [Advanced Deep Learning with Python](https://www.amazon.com/Advanced-Dee
 
 ![Luong_output](./images/Luong_ouptput.png)
 
+
+## 🎬 Demo
+
+➡️ **[Watch the Demo Attention Decoder Sequence](https://jalammar.github.io/images/attention_tensor_dance.mp4)**
+> **Note:**
+> - Instead of `<END>`, we use `<BOS>` or `<SOS>`.
+> - Here, `h4` and subsequent hidden states are the decoder hidden states.
+> - Pay attention to the color scheme to understand the inputs and outputs of the decoder RNN. 
+
+
+## 🧑‍💻 Multiplicative Attention Code:
+
 ```Python
 import torch
 import torch.nn as nn
